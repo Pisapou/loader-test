@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone de Test Loader</title>
+    <link rel="stylesheet" href="test.css" />
+</head>
+
+<body>
+    
+    <div class="loader">
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+    </div>
+    
+    <header>
+        <a href="#" class="logo"><img src="logo.png"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="general2.html">Plus Sur Moi</a></li>
+            <li><a href="dev.html">Developpement</a></li>
+            <li><a href="actu.html">Actualités</a></li>
+        </ul>
+    </header>
+    
+    
+    <div class="circle"></div>
+    
+    
+    
+    <div class="card">
+        <div class="content">
+            <h2>Development Profile</h2>
+            <p><br> Ayant commencer par du python, initié par mon parrain travaillant dans la sécurité informatique, je suis aujourd'hui capable d'utiliser de nombreux language de programmation comme : le Python, Le Javascript, Le HTML, le CSS.<br><br> J'ai également déjà travailler sur de nombreux projets comme crée un bot discord avec l'aide de node.js ou encore la création de ce site.<br><br> Si vous souhaitez me contactez via discord, 
+            </p>
+            <a href="https://discord.gg/cFh4784">Cliquez ici !</a>
+        </div>
+        <img src="cartedi.png">
+    </div>
+    <section></section>
+    <script>
+        
+        const loader = document.querySelector('.loader');
+        
+        window.addEventListener('load', () => {
+            loader.classList.add('fondu-out');
+            $(loader).fadeOut;
+        })
+        
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        
+        const card = document.querySelector(".card");
+        
+        card.addEventListener("click", function (e) {
+            card.classList.toggle('is-clicked');
+        });
+        
+    </script>
+</body>
+</html>
